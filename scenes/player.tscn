@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hi0tjeb8awib"]
 
 [ext_resource type="Texture2D" uid="uid://di5l5xv66d0ic" path="res://assets/Images/Characters/Basic Charakter Spritesheet.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://qj82mgew0jf3" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bluwlcouprsj3" path="res://assets/Images/Characters/Basic Charakter Actions.png" id="2_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
@@ -389,13 +390,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(14, 8)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
+size = Vector2(14, 6)
+
 [node name="Player" type="CharacterBody2D" unique_id=750515966]
+script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1196668291]
 sprite_frames = SubResource("SpriteFrames_fulsm")
-animation = &"idle_down"
+animation = &"swing_axe_down"
 autoplay = "idle_down"
-frame_progress = 0.7315613
+frame_progress = 0.02970166
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121946979]
 position = Vector2(0, 4)
@@ -403,3 +408,9 @@ shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=26936204]
 zoom = Vector2(3, 3)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1180556709]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1682721369]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_qhqgy")

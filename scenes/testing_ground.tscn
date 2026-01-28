@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d4dw2n4atisxi"]
+
+[ext_resource type="Texture2D" uid="uid://bslpndesf1bd4" path="res://assets/Images/Tilesets/Hills.png" id="1_iguvu"]
+[ext_resource type="PackedScene" uid="uid://hi0tjeb8awib" path="res://scenes/player.tscn" id="2_kxaed"]
+
+[node name="TestingGround" type="Control" unique_id=1160650370]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1146465391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iguvu")
+stretch_mode = 1
+
+[node name="Player" parent="." unique_id=750515966 instance=ExtResource("2_kxaed")]
+position = Vector2(414, 265)
