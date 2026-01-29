@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xy37n27kndp0"]
+
+[ext_resource type="Texture2D" uid="uid://xhat2mfammdj" path="res://assets/Images/Plant update 2/Pine Tree Biome.png" id="1_14ioj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osvoj"]
+atlas = ExtResource("1_14ioj")
+region = Rect2(119, 0, 35, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tv3fo"]
+size = Vector2(16, 13)
+
+[node name="GrowthObject" type="StaticBody2D" unique_id=581904856]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=53165427]
+position = Vector2(0, -19)
+texture = SubResource("AtlasTexture_osvoj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=266853886]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_tv3fo")
+
+[node name="BreakingSound" type="AudioStreamPlayer2D" parent="." unique_id=1487226224]
