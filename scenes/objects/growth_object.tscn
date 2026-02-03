@@ -1,22 +1,25 @@
 [gd_scene format=3 uid="uid://xy37n27kndp0"]
 
 [ext_resource type="Texture2D" uid="uid://xhat2mfammdj" path="res://assets/Images/Plant update 2/Pine Tree Biome.png" id="1_14ioj"]
+[ext_resource type="Script" uid="uid://ce5760qt7jcgq" path="res://scripts/growth_object.gd" id="1_b83fa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_osvoj"]
 atlas = ExtResource("1_14ioj")
-region = Rect2(119, 0, 35, 46)
+region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tv3fo"]
-size = Vector2(16, 13)
+size = Vector2(8, 8)
 
 [node name="GrowthObject" type="StaticBody2D" unique_id=581904856]
+script = ExtResource("1_b83fa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=53165427]
-position = Vector2(0, -19)
+position = Vector2(0, -4.74)
 texture = SubResource("AtlasTexture_osvoj")
+offset = Vector2(0, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=266853886]
-position = Vector2(0, -5.5)
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_tv3fo")
 
 [node name="BreakingSound" type="AudioStreamPlayer2D" parent="." unique_id=1487226224]

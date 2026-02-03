@@ -388,7 +388,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(14, 8)
+size = Vector2(12, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 size = Vector2(14, 6)
@@ -403,7 +403,7 @@ autoplay = "idle_down"
 frame_progress = 0.02970166
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121946979]
-position = Vector2(0, 4)
+position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=26936204]

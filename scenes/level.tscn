@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://hi0tjeb8awib" path="res://scenes/player.tscn" id="1_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://xy37n27kndp0" path="res://scenes/objects/growth_object.tscn" id="2_w8frs"]
+[ext_resource type="Resource" uid="uid://cfaus13coan6x" path="res://data/wood/pine_tree.tres" id="3_w8frs"]
 
 [node name="Level" type="Node2D" unique_id=1982366552]
 
@@ -9,4 +10,17 @@
 position = Vector2(124, 76)
 
 [node name="GrowthBody" parent="." unique_id=581904856 instance=ExtResource("2_w8frs")]
-position = Vector2(213, 85)
+position = Vector2(141, 83)
+data = ExtResource("3_w8frs")
+
+[node name="GrowthBody2" parent="." unique_id=292318069 instance=ExtResource("2_w8frs")]
+position = Vector2(156, 83)
+data = ExtResource("3_w8frs")
+
+[node name="GrowthBody3" parent="." unique_id=1137802430 instance=ExtResource("2_w8frs")]
+position = Vector2(171, 83)
+data = ExtResource("3_w8frs")
+
+[node name="GrowthBody4" parent="." unique_id=1119007571 instance=ExtResource("2_w8frs")]
+position = Vector2(186, 83)
+data = ExtResource("3_w8frs")
