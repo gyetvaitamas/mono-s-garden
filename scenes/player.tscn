@@ -261,7 +261,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4r5pv")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_axe_down",
 "speed": 5.0
 }, {
@@ -272,7 +272,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i4ail")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_axe_left",
 "speed": 5.0
 }, {
@@ -283,7 +283,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ni07")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_axe_right",
 "speed": 5.0
 }, {
@@ -294,7 +294,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ke2ow")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_axe_up",
 "speed": 5.0
 }, {
@@ -305,7 +305,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_31cv2")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_hoe_down",
 "speed": 5.0
 }, {
@@ -316,7 +316,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dt7fs")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_hoe_left",
 "speed": 5.0
 }, {
@@ -327,7 +327,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wnwbv")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_hoe_right",
 "speed": 5.0
 }, {
@@ -338,7 +338,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_487ah")
 }],
-"loop": true,
+"loop": false,
 "name": &"swing_hoe_up",
 "speed": 5.0
 }, {
@@ -349,7 +349,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bj30b")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_down",
 "speed": 5.0
 }, {
@@ -360,7 +360,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hax0n")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_left",
 "speed": 5.0
 }, {
@@ -371,7 +371,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j2b1d")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_right",
 "speed": 5.0
 }, {
@@ -382,7 +382,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2dvfe")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_up",
 "speed": 5.0
 }]
@@ -391,16 +391,17 @@ animations = [{
 size = Vector2(12, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(14, 6)
+size = Vector2(12, 7)
 
 [node name="Player" type="CharacterBody2D" unique_id=750515966]
 script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1196668291]
 sprite_frames = SubResource("SpriteFrames_fulsm")
-animation = &"swing_axe_down"
+animation = &"swing_axe_right"
 autoplay = "idle_down"
-frame_progress = 0.02970166
+frame = 1
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121946979]
 position = Vector2(0, 4.5)
@@ -410,7 +411,10 @@ shape = SubResource("RectangleShape2D_g2els")
 zoom = Vector2(3, 3)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1180556709]
+position = Vector2(10, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1682721369]
-position = Vector2(0, 11)
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_qhqgy")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

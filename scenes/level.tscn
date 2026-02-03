@@ -12,15 +12,3 @@ position = Vector2(124, 76)
 [node name="GrowthBody" parent="." unique_id=581904856 instance=ExtResource("2_w8frs")]
 position = Vector2(141, 83)
 data = ExtResource("3_w8frs")
-
-[node name="GrowthBody2" parent="." unique_id=292318069 instance=ExtResource("2_w8frs")]
-position = Vector2(156, 83)
-data = ExtResource("3_w8frs")
-
-[node name="GrowthBody3" parent="." unique_id=1137802430 instance=ExtResource("2_w8frs")]
-position = Vector2(171, 83)
-data = ExtResource("3_w8frs")
-
-[node name="GrowthBody4" parent="." unique_id=1119007571 instance=ExtResource("2_w8frs")]
-position = Vector2(186, 83)
-data = ExtResource("3_w8frs")

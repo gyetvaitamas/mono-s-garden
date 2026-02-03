@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ResourceData" format=3 uid="uid://bufgxi1pkicxc"]
+
+[ext_resource type="Script" uid="uid://cabcduqeqdk2s" path="res://scripts/resource_data.gd" id="1_rcmmq"]
+[ext_resource type="Texture2D" uid="uid://xhat2mfammdj" path="res://assets/Images/Plant update 2/Pine Tree Biome.png" id="2_pekj6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgdwq"]
+atlas = ExtResource("2_pekj6")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axmjd"]
+atlas = ExtResource("2_pekj6")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jxww"]
+atlas = ExtResource("2_pekj6")
+region = Rect2(96, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egtmm"]
+atlas = ExtResource("2_pekj6")
+region = Rect2(128, 48, 32, 16)
+
+[resource]
+script = ExtResource("1_rcmmq")
+name = "pine_tree_log"
+textures = Array[Texture2D]([SubResource("AtlasTexture_lgdwq"), SubResource("AtlasTexture_axmjd"), SubResource("AtlasTexture_6jxww"), SubResource("AtlasTexture_egtmm")])
+value = 10
+metadata/_custom_type_script = "uid://cabcduqeqdk2s"
