@@ -391,7 +391,7 @@ animations = [{
 size = Vector2(12, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(12, 7)
+size = Vector2(12, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=750515966]
 script = ExtResource("1_qhqgy")
@@ -413,7 +413,6 @@ position = Vector2(10, 0)
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1682721369]
-position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="CooldownTimer" type="Timer" parent="." unique_id=1727421053]

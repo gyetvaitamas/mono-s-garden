@@ -116,7 +116,6 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 		if detected_objects.size() > 0:
 			var object_to_hit = get_most_overlapping_object()
 			object_to_hit.take_damage(tool_strength)
-			#object_to_hit.take_damage(pickaxe_strength)
 			#pickaxe_hit_sound.play()
 
 
@@ -136,5 +135,5 @@ func get_most_overlapping_object() -> GrowthObject:
 	
 	return closest_object
 
-#func add_ore(data: OreResourceData) -> bool:
-	#return inventory.add_item(data)
+func add_resource(data: ResourceData) -> bool:
+	return true# inventory.add_item(data)
