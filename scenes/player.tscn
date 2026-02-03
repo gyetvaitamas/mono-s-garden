@@ -398,10 +398,8 @@ script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1196668291]
 sprite_frames = SubResource("SpriteFrames_fulsm")
-animation = &"swing_axe_right"
+animation = &"swing_axe_down"
 autoplay = "idle_down"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121946979]
 position = Vector2(0, 4.5)
@@ -412,9 +410,15 @@ zoom = Vector2(3, 3)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1180556709]
 position = Vector2(10, 0)
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1682721369]
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_qhqgy")
 
+[node name="CooldownTimer" type="Timer" parent="." unique_id=1727421053]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
