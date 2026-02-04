@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="GrowthData" format=3 uid="uid://7ugishb6j7f5"]
+
+[ext_resource type="Resource" uid="uid://bf8mje6b4t8md" path="res://data/wood/birch_tree_log.tres" id="1_l7wvp"]
+[ext_resource type="Script" uid="uid://dpt46b0o3ivsf" path="res://scripts/growth_data.gd" id="2_bm4ss"]
+[ext_resource type="Texture2D" uid="uid://t1amrl42t6tg" path="res://assets/Images/Plant update 2/Birch wood Biom.png" id="3_l7wvp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ndcp"]
+atlas = ExtResource("3_l7wvp")
+region = Rect2(49, 32, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wecon"]
+atlas = ExtResource("3_l7wvp")
+region = Rect2(64, 16, 16, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p0k5"]
+atlas = ExtResource("3_l7wvp")
+region = Rect2(83, 16, 26, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttu2j"]
+atlas = ExtResource("3_l7wvp")
+region = Rect2(112, 0, 48, 46)
+
+[resource]
+script = ExtResource("2_bm4ss")
+textures = Array[Texture2D]([SubResource("AtlasTexture_6ndcp"), SubResource("AtlasTexture_wecon"), SubResource("AtlasTexture_4p0k5"), SubResource("AtlasTexture_ttu2j")])
+texture_offsets = Array[float]([0.5, -5.0, -8.0, -14.0])
+rarity = 100
+resource_data = ExtResource("1_l7wvp")
+metadata/_custom_type_script = "uid://dpt46b0o3ivsf"

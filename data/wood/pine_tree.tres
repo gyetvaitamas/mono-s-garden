@@ -24,6 +24,6 @@ region = Rect2(119, 0, 35, 46)
 script = ExtResource("1_l7vwm")
 textures = Array[Texture2D]([SubResource("AtlasTexture_6ndcp"), SubResource("AtlasTexture_wecon"), SubResource("AtlasTexture_4p0k5"), SubResource("AtlasTexture_ttu2j")])
 texture_offsets = Array[float]([0.5, -5.0, -8.0, -14.0])
-rarity = 50
+rarity = 25
 resource_data = ExtResource("1_wecon")
 metadata/_custom_type_script = "uid://dpt46b0o3ivsf"

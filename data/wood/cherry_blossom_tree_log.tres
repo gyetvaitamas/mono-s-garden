@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ResourceData" format=3 uid="uid://b5wve4h2ynnph"]
+
+[ext_resource type="Script" uid="uid://cabcduqeqdk2s" path="res://scripts/resource_data.gd" id="1_ajla5"]
+[ext_resource type="Texture2D" uid="uid://ctnlveaeg50y0" path="res://assets/Images/Plant update 2/Cherry Blossom Biom.png" id="2_ajla5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgdwq"]
+atlas = ExtResource("2_ajla5")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axmjd"]
+atlas = ExtResource("2_ajla5")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jxww"]
+atlas = ExtResource("2_ajla5")
+region = Rect2(112, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egtmm"]
+atlas = ExtResource("2_ajla5")
+region = Rect2(128, 48, 32, 16)
+
+[resource]
+script = ExtResource("1_ajla5")
+name = "cherry_blossom_tree_log"
+textures = Array[Texture2D]([SubResource("AtlasTexture_lgdwq"), SubResource("AtlasTexture_axmjd"), SubResource("AtlasTexture_6jxww"), SubResource("AtlasTexture_egtmm")])
+value = 3
+metadata/_custom_type_script = "uid://cabcduqeqdk2s"

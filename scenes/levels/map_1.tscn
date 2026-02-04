@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://dv0aie03k8173"]
 
 [ext_resource type="PackedScene" uid="uid://o30qekb1o51s" path="res://scenes/levels/base_map.tscn" id="1_h2hyn"]
-[ext_resource type="PackedScene" uid="uid://hi0tjeb8awib" path="res://scenes/player.tscn" id="2_v7fe1"]
 
 [node name="Map" unique_id=1316777490 instance=ExtResource("1_h2hyn")]
 
-[node name="Player" parent="." index="4" unique_id=750515966 instance=ExtResource("2_v7fe1")]
-position = Vector2(411, 305)
+[node name="PlayerSpawn" parent="." index="3" unique_id=1750673195]
+position = Vector2(369, 315)

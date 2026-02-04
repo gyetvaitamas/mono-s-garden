@@ -23,5 +23,5 @@ region = Rect2(128, 48, 32, 16)
 script = ExtResource("1_rcmmq")
 name = "pine_tree_log"
 textures = Array[Texture2D]([SubResource("AtlasTexture_lgdwq"), SubResource("AtlasTexture_axmjd"), SubResource("AtlasTexture_6jxww"), SubResource("AtlasTexture_egtmm")])
-value = 10
+value = 3
 metadata/_custom_type_script = "uid://cabcduqeqdk2s"

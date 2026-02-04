@@ -1,38 +1,22 @@
 [gd_scene format=3 uid="uid://dl0p5ttv2ulq8"]
 
+[ext_resource type="Script" uid="uid://5f8pul3fpxal" path="res://scripts/level.gd" id="1_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://hi0tjeb8awib" path="res://scenes/player.tscn" id="1_w7c3h"]
-[ext_resource type="PackedScene" uid="uid://xy37n27kndp0" path="res://scenes/objects/growth_object.tscn" id="2_w8frs"]
+[ext_resource type="Script" uid="uid://dpt46b0o3ivsf" path="res://scripts/growth_data.gd" id="2_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://dv0aie03k8173" path="res://scenes/levels/map_1.tscn" id="2_w8frs"]
+[ext_resource type="Resource" uid="uid://7ugishb6j7f5" path="res://data/wood/birch_tree.tres" id="3_klq6b"]
 [ext_resource type="Resource" uid="uid://cfaus13coan6x" path="res://data/wood/pine_tree.tres" id="3_w8frs"]
+[ext_resource type="Resource" uid="uid://tne82vgssf5r" path="res://data/wood/cherry_blossom_tree.tres" id="5_b121j"]
 
 [node name="Level" type="Node2D" unique_id=1982366552]
+script = ExtResource("1_mx8sn")
+growth_types = Array[ExtResource("2_mx8sn")]([ExtResource("3_klq6b"), ExtResource("3_w8frs"), ExtResource("5_b121j")])
 
-[node name="Player" parent="." unique_id=750515966 instance=ExtResource("1_w7c3h")]
-position = Vector2(124, 76)
+[node name="Map" parent="." unique_id=1316777490 instance=ExtResource("2_w8frs")]
 
 [node name="GrowthResourceContainer" type="Node2D" parent="." unique_id=1332442057]
 
 [node name="GrowthObjectContainer" type="Node2D" parent="." unique_id=88488867]
 
-[node name="GrowthBody" parent="GrowthObjectContainer" unique_id=581904856 instance=ExtResource("2_w8frs")]
-position = Vector2(141, 83)
-health = 1
-age = 1
-data = ExtResource("3_w8frs")
-
-[node name="GrowthBody2" parent="GrowthObjectContainer" unique_id=1888535317 instance=ExtResource("2_w8frs")]
-position = Vector2(149, 63)
-health = 2
-age = 2
-data = ExtResource("3_w8frs")
-
-[node name="GrowthBody3" parent="GrowthObjectContainer" unique_id=1187307261 instance=ExtResource("2_w8frs")]
-position = Vector2(156, 96)
-health = 3
-age = 3
-data = ExtResource("3_w8frs")
-
-[node name="GrowthBody4" parent="GrowthObjectContainer" unique_id=1219907206 instance=ExtResource("2_w8frs")]
-position = Vector2(190, 74)
-health = 4
-age = 4
-data = ExtResource("3_w8frs")
+[node name="Player" parent="." unique_id=750515966 instance=ExtResource("1_w7c3h")]
+position = Vector2(446, 267)

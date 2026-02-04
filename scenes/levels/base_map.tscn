@@ -103,6 +103,7 @@ texture = ExtResource("2_pg17x")
 1:1/0/terrains_peering_bit/top_left_corner = 0
 1:1/0/terrains_peering_bit/top_side = 0
 1:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0/custom_data_0 = true
 2:1/0 = 0
 2:1/0/terrain_set = 0
 2:1/0/terrain = 0
@@ -316,6 +317,7 @@ texture = ExtResource("2_pg17x")
 9:5/0 = 0
 0:6/0 = 0
 1:6/0 = 0
+1:6/0/custom_data_0 = true
 2:6/0 = 0
 3:6/0 = 0
 4:6/0 = 0
@@ -501,6 +503,8 @@ physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Grass"
 terrain_set_0/terrain_0/color = Color(0.019185953, 0.4715631, 2.8878452e-07, 1)
+custom_data_layer_0/name = "can_spawn_growth_object"
+custom_data_layer_0/type = 1
 sources/3 = SubResource("TileSetAtlasSource_jnhen")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n43jo"]

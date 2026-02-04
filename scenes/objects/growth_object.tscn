@@ -2,6 +2,31 @@
 
 [ext_resource type="Texture2D" uid="uid://xhat2mfammdj" path="res://assets/Images/Plant update 2/Pine Tree Biome.png" id="1_14ioj"]
 [ext_resource type="Script" uid="uid://ce5760qt7jcgq" path="res://scripts/growth_object.gd" id="1_b83fa"]
+[ext_resource type="Script" uid="uid://dpt46b0o3ivsf" path="res://scripts/growth_data.gd" id="2_2acbp"]
+[ext_resource type="Resource" uid="uid://bufgxi1pkicxc" path="res://data/wood/pine_tree_log.tres" id="2_thdcq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ndcp"]
+atlas = ExtResource("1_14ioj")
+region = Rect2(49, 32, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wecon"]
+atlas = ExtResource("1_14ioj")
+region = Rect2(64, 22, 16, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p0k5"]
+atlas = ExtResource("1_14ioj")
+region = Rect2(83, 16, 26, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttu2j"]
+atlas = ExtResource("1_14ioj")
+region = Rect2(119, 0, 35, 46)
+
+[sub_resource type="Resource" id="Resource_thdcq"]
+script = ExtResource("2_2acbp")
+textures = Array[Texture2D]([SubResource("AtlasTexture_6ndcp"), SubResource("AtlasTexture_wecon"), SubResource("AtlasTexture_4p0k5"), SubResource("AtlasTexture_ttu2j")])
+texture_offsets = Array[float]([0.5, -5.0, -8.0, -14.0])
+resource_data = ExtResource("2_thdcq")
+metadata/_custom_type_script = "uid://dpt46b0o3ivsf"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_osvoj"]
 atlas = ExtResource("1_14ioj")
@@ -12,6 +37,9 @@ size = Vector2(8, 8)
 
 [node name="GrowthObject" type="StaticBody2D" unique_id=581904856]
 script = ExtResource("1_b83fa")
+health = 3
+age = 3
+data = SubResource("Resource_thdcq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=53165427]
 position = Vector2(0, -4.74)
