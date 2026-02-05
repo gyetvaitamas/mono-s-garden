@@ -19,6 +19,8 @@ var can_move: bool = true
 
 #@onready var pickaxe_hit_sound: AudioStreamPlayer2D = $PickaxeHitSound
 
+signal switch_tool
+
 func _ready() -> void:
 	hitbox_offset = hitbox.position # Initialize the hitbox offset
 	# inventory = Inventory.new(4) # Create inventory with 4 slots
@@ -43,9 +45,18 @@ func _physics_process(_delta: float) -> void:
 		velocity = Vector2.ZERO
 		return
 	
+	process_tool_switch()
 	process_movement()
 	process_animation()
 	move_and_slide()
+
+func process_tool_switch() -> void:
+	if Input.is_action_just_pressed("switch_tool_1"):
+		switch_tool.emit(1)
+	elif Input.is_action_just_pressed("switch_tool_2"):
+		switch_tool.emit(2)
+	elif Input.is_action_just_pressed("switch_tool_3"):
+		switch_tool.emit(3)
 
 # Movement and animation
 func process_movement() -> void:
@@ -76,11 +87,6 @@ func play_animation(prefix: String, direction: Vector2) -> void:
 		animated_sprite_2d.play(prefix + "_up")
 	elif direction.y > 0:
 		animated_sprite_2d.play(prefix + "_down")
-
-#func die() -> bool:
-	#animated_sprite_2d.play("dying")
-	#await animated_sprite_2d.animation_finished
-	#return true
 
 # Hitbox offset
 func update_hitbox_position() -> void:
